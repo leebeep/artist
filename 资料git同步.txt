@@ -1,0 +1,46 @@
+------------------------------------------------------------ GitHub - 配置win10
+git config --global user.name "leebeep"
+git config --global user.email talkbeep@163.com
+ssh-keygen -t rsa -C "talkbeep@163.com"  
+
+ssh -T git@github.com
+
+-- 新建一个仓库
+
+------------------------------------------------------------ GitHub - 每次上传主库的操作
+1）先在GitHub新建一个私人仓库（只需初次）
+
+2）克隆仓库（只需初次）
+git clone git@github.com:leebeep/artist.git
+
+# 如果网速慢可以使用第三方镜像，第一次会体式输入账号密码
+git clone https://github.com.cnpmjs.org/leebeep/artist.git
+
+3）将项目内所有文件都添加到暂存区
+git add .  
+
+4）提交到仓库
+git commit -m "add commit"
+git push -u origin main
+
+
+------------------------------------------------------------ GitHub - 每次下载合并的操作
+# 下面命令表示，取回 origin/master 分支，再与本地的 brantest 分支合并
+git pull origin main
+
+
+------------------------------------------------------------ GitHub -win10
+
+echo "# msks" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/leebeep/msks.git
+git push -u origin main
+                
+先在GitHub新建一个私人仓库
+
+git remote add origin https://github.com/leebeep/msks.git
+git branch -M main
+git push -u origin main
